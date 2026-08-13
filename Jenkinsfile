@@ -40,4 +40,15 @@ pipeline {
             }
         }
     }
+    post { 
+        always { 
+            echo 'I will always execute'
+        }
+        success { 
+            echo 'I will execute with success'
+        }
+        failure { 
+            echo 'I will  say Hello with failure!'
+        }
+    }
 }
