@@ -6,10 +6,14 @@ pipeline {
         timeout(time: 60, unit: 'SECONDS')
         disableConcurrentBuilds()
     }
+    environment { 
+        Greetings = 'Hello!.. Good morning'
+    }
     stages {
         stage('Build') {
             steps {
                sh 'echo this is build stage'
+               env 
             }
         }
         stage('Test') {
