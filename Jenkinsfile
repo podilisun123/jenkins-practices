@@ -61,5 +61,6 @@ pipeline {
         failure {
             echo 'i wil say only in failure'
         }
+    }
     
 }
