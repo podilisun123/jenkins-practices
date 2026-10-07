@@ -47,9 +47,19 @@ pipeline {
                 echo "Choice: ${params.CHOICE}"
 
                 echo "Password: ${params.PASSWORD}"
-                echo 'env'
+                echo env
             }
         }
     }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+        sucess { 
+            echo 'I will  say only in sucess Hello again!'
+        }
+        failure {
+            echo 'i wil say only in failure'
+        }
     
 }
